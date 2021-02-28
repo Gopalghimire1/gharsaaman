@@ -1,0 +1,10 @@
+<div class="qty">
+    <div class="title">
+        Quantity: 
+    </div>
+    <div class="qty-input">
+        <button class=" mr-2" (click)="addQty(-1)">-</button>
+        <input type="number"   [(ngModel)]="qty">
+        <button class="  ml-2" (click)="addQty(1)"> +</button>
+    </div>
+</div>

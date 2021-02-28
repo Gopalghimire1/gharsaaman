@@ -1,0 +1,92 @@
+<div class="cartitem" *ngIf="largescreen; else large">
+  <div class="row p-0 m-0">
+    <div class="col-3 p-0">
+      <img class="cartimg" src="https://meroemart.com/{{cart.image}}" alt="" >
+    </div>
+    <div class="col-9 p-1">
+      <div class="name">
+        {{cart.name}}
+      </div>
+      <div class="price">
+        Rs. {{cart.price}}
+      </div>
+      <div class="quantity">
+        <div class="qty-input">
+          <button class=" mr-2" (click)="addQty(-1)">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="10" height="10" viewBox="0 0 172 172"
+              style=" fill:#000000;">
+              <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                style="mix-blend-mode: normal">
+                <path d="M0,172v-172h172v172z" fill="none"></path>
+                <g fill="#ffffff">
+                  <path d="M21.5,78.83333v14.33333h129v-14.33333z"></path>
+                </g>
+              </g>
+            </svg>
+          </button>
+          <input type="number" [(ngModel)]="cart.qty">
+          <button class="  ml-2" (click)="addQty(1)">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="10" height="10" viewBox="0 0 172 172"
+              style=" fill:#ffffff;">
+              <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                style="mix-blend-mode: normal">
+                <path d="M0,172v-172h172v172z" fill="none"></path>
+                <g fill="#ffffff">
+                  <path
+                    d="M85.83203,17.04323c-6.32845,0.09274 -11.38527,5.2949 -11.2987,11.62344v45.86667h-45.86667c-4.13529,-0.05848 -7.98173,2.11417 -10.06645,5.68601c-2.08471,3.57184 -2.08471,7.98948 0,11.56132c2.08471,3.57184 5.93115,5.74449 10.06645,5.68601h45.86667v45.86667c-0.05848,4.13529 2.11417,7.98173 5.68601,10.06645c3.57184,2.08471 7.98948,2.08471 11.56132,0c3.57184,-2.08471 5.74449,-5.93115 5.68601,-10.06645v-45.86667h45.86667c4.13529,0.05848 7.98173,-2.11417 10.06645,-5.68601c2.08471,-3.57184 2.08471,-7.98948 0,-11.56132c-2.08471,-3.57184 -5.93115,-5.74449 -10.06645,-5.68601h-45.86667v-45.86667c0.04237,-3.09747 -1.17017,-6.08033 -3.36168,-8.26973c-2.1915,-2.18939 -5.17553,-3.39907 -8.27296,-3.35371z">
+                  </path>
+                </g>
+              </g>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="cancel" (click)="delete()">
+    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="12" height="12" viewBox="0 0 172 172"
+      style=" fill:#000000;">
+      <defs>
+        <linearGradient x1="86" y1="24.44192" x2="86" y2="147.55808" gradientUnits="userSpaceOnUse"
+          id="color-1_T9nkeADgD3z6_gr1">
+          <stop offset="0" stop-color="#ffffff"></stop>
+          <stop offset="1" stop-color="#cccccc"></stop>
+        </linearGradient>
+      </defs>
+      <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+        stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+        font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+        <path d="M0,172v-172h172v172z" fill="none"></path>
+        <g fill="url(#color-1_T9nkeADgD3z6_gr1)">
+          <path
+            d="M129.516,147.55808c-1.42693,0.00287 -2.7958,-0.56481 -3.80192,-1.57667l-39.71408,-39.71408l-39.71408,39.71408c-2.09894,2.0983 -5.50131,2.0983 -7.60025,0l-12.66708,-12.68142c-2.0983,-2.09894 -2.0983,-5.50131 0,-7.60025l39.71408,-39.69975l-39.71408,-39.71408c-2.0983,-2.09894 -2.0983,-5.50131 0,-7.60025l12.68142,-12.66708c2.09894,-2.0983 5.50131,-2.0983 7.60025,0l39.69975,39.71408l39.71408,-39.71408c2.09894,-2.0983 5.50131,-2.0983 7.60025,0l12.66708,12.68142c2.0983,2.09894 2.0983,5.50131 0,7.60025l-39.71408,39.69975l39.71408,39.71408c2.0983,2.09894 2.0983,5.50131 0,7.60025l-12.68142,12.66708c-1.00152,1.00779 -2.3632,1.57516 -3.784,1.57667z">
+          </path>
+        </g>
+      </g>
+    </svg>
+  </button>
+</div>
+
+<ng-template #large>
+  <div class="flex">
+    <div class="image">
+      <img class="cartimg" src="https://meroemart.com/{{cart.image}}" alt="" >
+    </div>
+    <div class="desc">
+      <span class="title">{{cart.name}}</span>
+      <div class="varient">
+        <span >Size : Large</span>
+        <span >Color : Red</span>
+      </div>
+    </div>
+    <div class="qty">
+      hey
+    </div>
+  </div>
+  <hr>
+</ng-template>
+<!-- hello -->

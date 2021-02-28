@@ -1,0 +1,11 @@
+.thumb{
+        border:1px solid #f1f1f1;
+        padding:2px;
+        border-radius: 5px;
+    &:hover{
+        border:1px solid red;
+    }
+    &.active{
+        border:1px solid red;
+    }
+}

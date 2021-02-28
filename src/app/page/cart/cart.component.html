@@ -1,0 +1,26 @@
+<div class="bb" (scroll)="scroll($event)">
+  <div class="d-none d-md-block">
+    <app-desktopnav ></app-desktopnav>
+  </div>
+  <div class="d-block d-md-none">
+    <app-othenav title="My Cart"></app-othenav>
+  </div>
+  <div class="main">
+    <div class="top">
+      <div class="title">Shopping Cart</div>
+    </div>
+    <div class="row laptop">
+      <div class="col-lg-8 cart-body">
+        <div *ngFor="let item of this.cartservice.items">
+          <app-cartitem [cart]="item" (changed)="changed($event)" (deleted)="delete($event)"></app-cartitem>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        The total amount of
+      </div>
+    </div>
+
+  </div>
+  <app-mobilefoot></app-mobilefoot>
+</div>

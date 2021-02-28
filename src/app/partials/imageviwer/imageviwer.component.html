@@ -1,0 +1,8 @@
+<div class="mb-2">
+    <img src="w-100"  [src]="current">
+</div>
+<div class="row m-0">
+    <div class="col-md-2 p-0" *ngFor="let item of images">
+        <app-small [image]="item" (selected)="selected($event)"></app-small>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<div *ngIf="largescreen; else smallnav">
+  <app-desktopnav></app-desktopnav>
+</div>
+<ng-template #smallnav>
+  <app-mobilenav></app-mobilenav>
+</ng-template>
+<router-outlet>
+</router-outlet>
+<div>
+  <app-desktopfoot></app-desktopfoot>
+</div>

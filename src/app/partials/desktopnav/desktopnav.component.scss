@@ -1,0 +1,155 @@
+.desktopnav{
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 2rem;
+  line-height: 1;
+  .logo{
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 10px;
+    }
+  .navsearch{
+    flex-grow:1;
+    margin: 5px 13px;
+    input{
+      width:100%;
+      border-radius: 40px;
+      height: 50px;
+      line-height: 50px;
+      outline: white;
+      padding:0px 30px;
+      border: 1px solid #ccc;
+    }
+  }
+  .border{
+    border-left: 1px #ccc solid;
+    margin: 20px 30px 0 20px;
+    height: 30px;
+  }
+  .contact{
+    margin: 10px 0;
+    // width: 600px;
+    .call{
+      font-size: 12px;
+      color: rgb(75, 70, 70);
+      font-weight: 700;
+    }
+    .number{
+      font-size: 20px;
+      font-weight: bold;
+      color: rgb(51, 40, 40);
+    }
+    .chat{
+      span{
+
+        font-size: 12px;
+        border-bottom: 1px rgb(243, 137, 38) solid;
+        color: rgb(243, 137, 38);
+        font-weight: 900;
+
+        cursor: pointer;
+      }
+    }
+    .border1{
+      border-left: 1px #ccc solid;
+      margin: 20px 30px 0 20px;
+      height: 30px;
+    }
+  }
+  .border1{
+    border-left: 1px #ccc solid;
+    margin: 20px 30px 0 20px;
+    height: 30px;
+  }
+  .icon{
+    margin-top: 14px;
+    img{
+      height: 30px;
+      width: 30px;
+    }
+   }
+
+    .account{
+      margin: 12px 12px 12px 15px;
+     .greet{
+       font-size: 14px;
+       color: rgb(53, 48, 48);
+       font-weight: 800;
+     }
+     .name{
+       font-size:16px;
+       font-weight: 900;
+     }
+  }
+  .heart-icon{
+    margin: 12px 12px 12px 15px;
+    img{
+      height: 30px;
+      width: 30px;
+    }
+  }
+
+  .cart-icon{
+    margin:12px 12px 12px 15px;
+    img{
+      height: 30px;
+      width: 30px;
+    }
+  }
+}
+
+.header{
+  &.top{
+    margin: 0px !important;
+    padding: 0px 2rem;
+    position: fixed;
+    top: 0px;
+    z-index: 9999;
+    right: 0;
+    left: 0;
+  }
+
+  transition: all 0.3s ;
+
+  height:90px;
+  margin: 0 2rem;
+  background-color: #4B4B4B;
+  z-index:1;
+  .navbar{
+    display: flex;
+    position: relative;
+    list-style-type: none;
+    margin:0px;
+    padding:0px;
+    .nav-item{
+      cursor: pointer;
+      display: inline-block;
+      text-align: center;
+      line-height:1;
+      padding-top:13px;
+      height:80px;
+      min-width: 60px;
+      padding-right:30px;
+      padding-left:30px;
+      max-width:125px;
+      word-wrap: break-word;
+
+      &:hover{
+        background:rgb(236, 114, 0);
+      }
+      .icon{
+        svg{
+          color:white;
+          width:25px;
+          height:25px;
+        }
+      }
+      .text{
+        color:white;
+        font-weight:500;
+        font-size: 13px;
+      }
+    }
+
+  }
+}

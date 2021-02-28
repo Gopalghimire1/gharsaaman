@@ -1,0 +1,104 @@
+
+  .flex{
+    display: flex;
+     .image{
+      flex:2;
+      margin-right: 2rem;
+      img{
+        width: 100%;
+      }
+    }
+    .desc{
+      flex:4;
+      .title{
+        font-size: 18px;
+        font-weight: 700;
+      }
+      .varient{
+        span{
+          margin-top:10px;
+          padding-right: 1rem;
+          font-size: 16px;
+          font-weight: 600;
+        }
+
+      }
+    }
+    .qty{
+      flex:2;
+    }
+  }
+
+
+@media(max-width:768px){
+  .cartitem{
+    border-radius:20px;
+    padding:10px;
+    background:white;
+    margin-bottom:7px;
+    position: relative;
+    .cartimg{
+        border-radius:20px;
+        width: 100%;
+    }
+    .name{
+        font-size:0.9rem;
+        font-weight:600;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .price{
+        font-size:0.7rem;
+        font-weight:600;
+        color:#27AE60;
+    }
+    .cancel{
+        background:#ff4747;
+        color:white;
+        position:absolute ;
+        top:10px;
+        right:10px;
+        height:20px;
+        width:20px;
+        border-radius:10px;
+        padding:0;
+        line-height:12px;
+    }
+
+    .quantity{
+        font-size:0.8rem;
+       button{
+            background: #27AE60;
+            color: white;
+            font-weight: 700;
+
+           border:none;
+           outline: none;
+           line-height: 1;
+           border-radius: 5px;
+       }
+        input{
+            text-align: center;
+
+            border-radius: 7px;
+            width: 30px !important;
+            outline: none !important;
+            border:none;
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+            }
+
+            /* Firefox */
+            &[type=number] {
+            -moz-appearance: textfield;
+            }
+        }
+
+    }
+}
+
+}

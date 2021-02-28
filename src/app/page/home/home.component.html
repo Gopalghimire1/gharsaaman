@@ -1,0 +1,22 @@
+<div class="carousal">
+  <ngb-carousel>
+    <ng-template ngbSlide *ngFor="let slider of this.service.sliders">
+      <div class="picsum-img-wrapper">
+       <img class="d-block w-100" src="https://www.meroemart.com/{{ slider.slider_image}}" alt="First slide" style="height: 390px;">
+      </div>
+      <div class="carousel-caption">
+        <h3>First slide label</h3>
+        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      </div>
+    </ng-template>
+
+  </ngb-carousel>
+</div>
+<div class="product">
+  <div class="row">
+    <div class="col-md-12" *ngFor="let section of this.service.products">
+        <h4 class="header">{{ section.title }}</h4>
+        <app-productgroup [products]="section.products"></app-productgroup>
+    </div>
+  </div>
+</div>

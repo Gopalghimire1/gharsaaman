@@ -1,0 +1,50 @@
+.main{
+  margin: 2rem;
+  .top{
+    height: 100px;
+    background-color: rgb(245, 229, 229);
+    text-align: center;
+    border-radius: 3px;
+    .title{
+      color: black;
+      font-size: 22px;
+      font-weight: 900;
+      padding-top:2rem;
+    }
+  }
+  .laptop{
+    margin: 1rem;
+    .cart-body{
+      box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+      border-radius: 5px;
+      padding: 1rem;
+    }
+  }
+}
+@media(max-width:768px){
+  .bb {
+    background: #27ae60;
+    overflow: scroll;
+    &.topped{
+      background: #efefef !important;
+
+    }
+    .main {
+      margin: 0px;
+      background: #efefef;
+      width: 100%;
+      /* margin: 0px 10px; */
+      padding: 7px 7px;
+      overflow: scroll;
+      border-radius: 15px;
+      bottom: 0px;
+      min-height: 150vh;;
+      div.post {
+        background: white;
+        border-radius: 15px;
+        margin: 5px;
+        padding: 10px;
+      }
+    }
+  }
+}

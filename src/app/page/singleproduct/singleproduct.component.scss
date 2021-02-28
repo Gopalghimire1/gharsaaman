@@ -1,0 +1,156 @@
+.singleproduct {
+  margin:20px 40px ;
+  display: flex;
+  .image {
+    flex: 2;
+    height: 100%;
+  }
+  .otherimage {
+    flex: 3;
+    height: 100%;
+  }
+  .description {
+    flex: 4;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    padding: 50px 2% 0px 2%;;
+    .category {
+      font-weight: 600;
+      color: #6b6b6b;
+    }
+    .name {
+      font-weight: 700;
+      font-size: 1.4rem;
+    }
+
+    .price {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: red;
+    }
+    .desc {
+      font-size: 1rem;
+      background: white;
+      margin:20px 0px;
+      .title {
+      }
+      .what {
+        background: white;
+      }
+    }
+    .variant {
+      margin: 10px 0;
+    }
+    .addtocart {
+      display: inline-block;
+      min-width: 170px;
+      height: 35px;
+      color: #ffffff;
+      border: none;
+      padding: 0 40px;
+      text-transform: uppercase;
+      font-size: 14px;
+      line-height:35px;
+      background-color: #0315ff;
+      letter-spacing: 1.5px;
+      font-weight: 600;
+      border-radius: 5px;
+      margin:35px 10px;
+    }
+  }
+  .suggestion{
+    flex:1;
+  }
+}
+
+@media (max-width: 768px) {
+  .searchnav {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    padding: 5px 10px;
+    z-index: 999;
+    justify-content: space-between;
+    .back {
+      padding: 5px;
+      display: block;
+      margin: 5px;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 50%;
+    }
+    .fav {
+      padding: 5px 7px;
+      display: block;
+      margin: 5px;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 50%;
+      &.active {
+        color: white !important;
+        background: #a81eff !important;
+      }
+    }
+  }
+  .singleproduct {
+    margin:0px;
+    display: block;
+    .image {
+      flex: 3;
+      height: 100%;
+    }
+    .description {
+      .cart {  
+          background:white;
+          padding:25px 5%;
+         
+      }
+      background: #ebebeb;
+      z-index: 999;
+      flex: 3;
+      height: 100%;
+      position: relative;
+      z-index: 1;
+      padding: 0px;
+      .category {
+        font-weight: 600;
+        color: #6b6b6b;
+      }
+      .name {
+        font-weight: 700;
+        font-size: 1.2rem;
+      }
+      .price {
+        font-weight: 700;
+        font-size: 1rem;
+        color: red;
+      }
+      .desc {
+        font-size: 1rem;
+        
+        .what {
+          
+        }
+      }
+      .variant {
+        margin: 10px 0px;
+      }
+      .addtocart {
+        display: inline-block;
+        min-width: 170px;
+        height: 35px;
+        color: #ffffff;
+        border: none;
+
+        padding: 0 40px;
+        text-transform: uppercase;
+        font-size: 12px;
+        line-height: 35px;
+        background-color: #0315ff;
+        letter-spacing: 1.5px;
+        font-weight: 600;
+        margin:10px 0px;
+      }
+    }
+  }
+}

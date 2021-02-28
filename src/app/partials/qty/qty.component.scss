@@ -1,0 +1,39 @@
+.qty{
+    margin-top: 5px;
+    .title{
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 3px;
+    }
+
+    .qty-input{
+        padding-left: 10px;
+       button{
+           background:#f1f1f1;
+           padding:7px;
+           border:none;
+           outline: none;
+           line-height: 1;
+           border-radius: 5px;
+       }
+        input{
+            text-align: center;
+            padding: 5px;
+            border-radius: 7px;
+            width: 40px !important;
+            outline: none !important;
+            border:none;
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+            }
+
+            /* Firefox */
+            &[type=number] {
+            -moz-appearance: textfield;
+            }
+        }
+
+    }
+}

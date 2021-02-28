@@ -1,0 +1,10 @@
+<div class="variant">
+    <h3 class="varianthead">
+        {{variant.title}}
+    </h3>
+    <div class="items">
+        <button class="option" *ngFor="let item of variant.variants" [ngClass]="{'active': item.id==choosen}" (click)="choose(item.id)">
+            {{item.name}}
+        </button>
+    </div>
+</div>
