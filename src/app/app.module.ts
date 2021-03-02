@@ -4,9 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MainComponent } from './template/main/main.component';
-import { UserComponent } from './template/user/user.component';
 import { HomeComponent } from './page/home/home.component';
 import { DesktopnavComponent } from './partials/desktopnav/desktopnav.component';
 import { MobilenavComponent } from './partials/mobilenav/mobilenav.component';
@@ -27,12 +26,23 @@ import { SignupComponent } from './page/signup/signup.component';
 import { CartComponent } from './page/cart/cart.component';
 import { CartitemComponent } from './page/cart/cartitem/cartitem.component';
 import { OthenavComponent } from './partials/othenav/othenav.component';
+import { UserdashboardComponent } from './page/userdashboard/userdashboard.component';
+import { EditprofileComponent } from './page/editprofile/editprofile.component';
+import { WishlistComponent } from './page/wishlist/wishlist.component';
+import { OrderComponent } from './page/order/order.component';
+import { OrderitemComponent } from './page/order/orderitem/orderitem.component';
+import { FavitemComponent } from './page/wishlist/favitem/favitem.component';
+import { UserComponent } from './template/user/user.component';
+import { UsersidebarComponent } from './partials/usersidebar/usersidebar.component';
+import { CategoryService } from './services/category.service';
+import { AuthserviceService } from './services/auth.service';
+import { HomepageService } from './services/homepage.service';
+import { LoaderComponent } from './partials/loader/loader.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    UserComponent,
     HomeComponent,
     DesktopnavComponent,
     MobilenavComponent,
@@ -50,7 +60,16 @@ import { OthenavComponent } from './partials/othenav/othenav.component';
     SignupComponent,
     CartComponent,
     CartitemComponent,
-    OthenavComponent
+    OthenavComponent,
+    UserdashboardComponent,
+    EditprofileComponent,
+    WishlistComponent,
+    FavitemComponent,
+    OrderComponent,
+    OrderitemComponent,
+    UserComponent,
+    UsersidebarComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
@@ -58,9 +77,10 @@ import { OthenavComponent } from './partials/othenav/othenav.component';
     HttpClientModule,
     FormsModule,
     NgbModule,
-    CarouselModule
+    CarouselModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [CategoryService,AuthserviceService,HomepageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

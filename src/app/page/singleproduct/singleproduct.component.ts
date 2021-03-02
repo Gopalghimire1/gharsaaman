@@ -7,6 +7,8 @@ import { FavService } from 'src/app/services/fav.service';
 import { Location } from '@angular/common';
 import { CartService } from 'src/app/services/cart.service';
 import { QtyComponent } from 'src/app/partials/qty/qty.component';
+import { ApiService } from 'src/app/services/api.service';
+import { Setting } from 'src/app/Model/setting';
 
 
 
@@ -36,7 +38,7 @@ export class SingleproductComponent implements OnInit {
   };
   active: boolean = false;
   @ViewChild('qty')qtyholder:QtyComponent;
-  constructor(private router :Router,public client: HttpClient, private route: ActivatedRoute, public fav: FavService, public location: Location,public cart:CartService) {
+  constructor(private router :Router,public client: ApiService, private route: ActivatedRoute, public fav: FavService, public location: Location,public cart:CartService) {
 
 
 
@@ -59,7 +61,7 @@ export class SingleproductComponent implements OnInit {
     this.route.queryParams.subscribe(params => {
       console.log(params);
       this.id = this.route.snapshot.paramMap.get('id')??"";
-      this.client.get("https://meroemart.com/api/product/" + this.id).subscribe((res: any) => {
+      this.client.get(Setting.apiurl+"product/" + this.id).subscribe((res: any) => {
         this.product = res;
         this.active = this.fav.favs.includes(this.product.product_id);
         if (this.product.stocktype == 1) {
@@ -83,9 +85,9 @@ export class SingleproductComponent implements OnInit {
         }
 
         var tempimages = [];
-        tempimages.push("https://meroemart.com/" + this.product.product_images);
+        tempimages.push(Setting.url + this.product.product_images);
         this.product.images.forEach((img:any) => {
-          tempimages.push("https://meroemart.com/" + img.image);
+          tempimages.push(Setting.url + img.image);
 
         });
 

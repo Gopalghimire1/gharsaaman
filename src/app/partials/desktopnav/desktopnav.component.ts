@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { CategoryService } from 'src/app/services/category.service';
+import { convertTypeAcquisitionFromJson } from 'typescript';
 
 @Component({
   selector: 'app-desktopnav',
@@ -11,6 +12,7 @@ export class DesktopnavComponent implements OnInit {
   constructor(public service :CategoryService) { }
   largescreen=true;
   ngOnInit(): void {
+    console.log("loading categories");
     this.service.getCategory();
     this.largescreen=window.innerWidth>768;
   }

@@ -1,0 +1,19 @@
+.outline{
+  border: 1px #ccc solid;
+  border-radius: 5px;
+  height: 120px;
+  padding: 1.4rem;
+  cursor: pointer;
+  .title{
+    font-weight: 600;
+    font-size: 15px;
+  }
+  .count{
+    font-size: 23px;
+    font-weight: 600;
+
+  }
+  &:hover{
+    background-color: #ccc;
+  }
+}

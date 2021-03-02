@@ -1,0 +1,43 @@
+$color1:#061639;
+
+.dashboard-sidebar{
+  background-color:#fff;
+  box-shadow: 0 0 15px 0 rgba(90,90,90,0.1);
+  .list-group{
+    .list-group-item{
+      border-radius:0 !important;
+      font-weight:bold;
+      border:0;
+      .link{
+        cursor: pointer;
+        outline:transparent;
+        &.router-link-active{
+          border-left:2px solid #FE7A48;
+          padding-left:5px;
+        }
+      }
+      svg{
+        margin-right:5px;
+        font-size: 20px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      &.active{
+        background-color: #fff;
+        position:relative;
+        &:before{
+          content:"";
+          position:absolute;
+          background-color: $color1;
+          left:0;
+          top:10px;
+          bottom:10px;
+          width:3px;
+        }
+      }
+      a{
+        color: $color1;
+      }
+    }
+  }
+}

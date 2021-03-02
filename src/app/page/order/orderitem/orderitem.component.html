@@ -1,0 +1,103 @@
+<div>
+    <div class="p-3 d-flex justify-content-between">
+        <strong>
+            Order ID #{{order.id}}
+        </strong>
+        <span (click)="toogleDetail()"> 
+            <span *ngIf="!detailshow">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    width="26" height="26"
+                    viewBox="0 0 172 172"
+                    style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#000000"><path d="M86,40.82933l-62.27764,62.27765l18.70913,18.70913l43.56851,-43.56851l43.56851,43.56851l18.70913,-18.70913z"></path></g></g></svg>
+            </span>
+            <span *ngIf="detailshow">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                width="26" height="26"
+                viewBox="0 0 172 172"
+                style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#000000"><path d="M7.16667,50.16667v32.16601l78.83333,39.50065l78.83333,-39.50065v-32.16601l-78.83333,39.50065z"></path></g></g></svg>
+            </span>
+             {{detailtext}}
+            
+        </span>
+
+    </div>
+    <div *ngIf="detailshow" class="p-3">
+        <div class="row">
+            <div class="col-6 col-md-3 text-right">
+                <strong>
+                    Name:
+                </strong>
+            </div>
+            <div class="col-6 col-md-3 ">
+                {{order.name}}
+            </div>
+            <div class="col-6 col-md-3 text-right">
+                <strong>
+                    Email:
+                </strong>
+            </div>
+            <div class="col-6 col-md-3 ">
+                {{order.email}}
+            </div>
+            <div class="col-6 col-md-3 text-right">
+                <strong>
+                    Phone:
+                </strong>
+            </div>
+            <div class="col-6 col-md-3">
+                {{order.phone}}
+            </div>
+            <div class="col-6 col-md-3 text-right">
+                <strong>
+                    Address:
+                </strong>
+            </div>
+            <div class="col-6 col-md-3">
+                {{order.streetaddress}}
+            </div>
+            
+        </div>
+       
+    </div>
+    <hr class="d-block d-md-none ">
+    <div *ngFor="let item of order.items">
+        <div class="p-3">
+
+            <div class="row">
+                <div class="col-md-2 col-4 mb-3 mb-md-0">
+                    <img (click)="imageClicked()" [src]="url+item.product.product_images" alt="" class="w-100 shadow"
+                        style="border-radius:15px;">
+                </div>
+                <div class="col-md-6 col-8">
+                    {{item.product.product_name}}
+                </div>
+                <div class="col-md-4" style="font-weight:600;">
+                    <div class="row">
+                        <div class="col-6">
+                            Rate
+                        </div>
+                        <div class="col-6 text-right">
+                            Rs {{item.rate}}
+                        </div>
+                        <div class="col-6">
+                            Qty
+                        </div>
+                        <div class="col-6 text-right">
+                            X {{item.qty}}
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-6">
+                            Total
+                        </div>
+                        <div class="col-6 text-right">
+                            Rs {{item.rate*item.qty}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="m-0 p-0">
+    </div>
+</div>
