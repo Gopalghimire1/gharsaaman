@@ -1,10 +1,51 @@
+.carousel{
+  outline: transparent !important;
+}
 .carousal{
    margin: 1rem 2rem;
+   outline: transparent !important;
+
+   .carousel-inner{
+     outline: transparent !important;
+   }
 }
  .product{
    margin: 2rem 2rem;
    .header{
-     margin-bottom: 2rem;
+     margin-bottom: 1.5rem;
+     font-weight: 700;
+      color: #505050;
+      margin-top:1rem;
+      position: relative;
+
+      &::after{
+        position: absolute;
+        content: "";
+        // width:75px;
+        height:1px;
+        bottom:-7px;
+        left:0px;
+        right:0px;
+        background-color: #dedede;
+      }
    }
  }
 
+
+ @media(max-width:768px){
+  .carousal{
+    margin: 0rem;
+ }
+  .product{
+    margin: 1rem 0px;
+    .header{
+      margin-bottom: 0.2rem;
+      font-size:1rem;
+      text-align: left;
+    }
+
+    .row{
+      margin:5px 0px;
+    }
+  }
+ }

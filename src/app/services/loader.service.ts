@@ -8,7 +8,7 @@ export class LoaderService {
   shown=false;
   constructor() { }
 
-  show(val:any){
+  show(val:boolean){
     this.shown=val;
   }
 }

@@ -1,0 +1,156 @@
+.mob-nav{
+  position:sticky;
+  top:0px;
+  background-color: rgb(22, 5, 5);
+  color:white;
+  padding:15px;
+  z-index:1000;
+
+  .search-link{
+    display: flex;
+    justify-content: space-between;
+    .back{
+      padding: 4px 2px 0 0;
+      margin-right: 5px;
+      font-weight: 700;
+      color: #eb5600;
+      cursor: pointer;
+    }
+    input{
+      border:none;
+      outline: transparent;
+      background-color: white;
+      color:#929292;
+      padding:5px 15px;
+      text-align: left;
+      width:100%;
+      border-radius: 15px;
+      flex-grow: 1;
+    }
+    .cancel{
+      margin-left: 5px;
+      border-radius: 10px;
+      color: #eb5600;
+      font-weight: 700;
+    }
+  }
+}
+
+.container{
+  margin-top: 2rem;
+}
+
+.romove-history{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  margin-bottom: 2px;
+  .remove-title{
+    color:#ccc;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .remove-icon{
+    font-size: 13px;
+  }
+}
+
+.search-history{
+  border: 1px #ccc solid;
+  border-radius: 13px;
+  max-width: fit-content;
+  margin-top: 6px;
+  margin-right: 2px;
+  display: inline-block;
+  .search-title{
+    padding:7px;
+    font-weight: 600;
+    font-size: 12px;
+  }
+}
+
+@media(max-width:768px){
+  .mob-nav{
+    position:sticky;
+    top:0px;
+    background-color: rgb(22, 5, 5);
+    color:white;
+    padding:15px;
+    z-index:1000;
+
+    .search-link{
+      display: flex;
+      justify-content: space-between;
+      .back{
+        padding: 5px 2px 0 0;
+        margin-right: 3px;
+        font-weight: 700;
+        color: #eb5600;
+      }
+      input{
+        border:none;
+        outline: transparent;
+        background-color: white;
+        color:#929292;
+        padding:5px 15px;
+        text-align: left;
+        width:100%;
+        border-radius: 15px;
+        flex-grow: 1;
+      }
+      .cancel{
+        padding: 8px 0 0 3px;
+        margin-left: 3px;
+        font-weight: 700;
+        color: #eb5600;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .romove-history{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 2px;
+    .remove-title{
+      color:#ccc;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .remove-icon{
+      font-size: 13px;
+    }
+  }
+
+  .search-history{
+    border: 1px #ccc solid;
+    border-radius: 13px;
+    max-width: fit-content;
+    margin-top: 6px;
+    margin-right: 2px;
+    display: inline-block;
+    .search-title{
+      padding:7px;
+      font-weight: 600;
+      font-size: 12px;
+    }
+  }
+
+  .container{
+    margin-top: 10px;
+  }
+
+  .search-img{
+    img{
+      height: 200px;
+    }
+  }
+
+  .not-found{
+    img{
+      height: 200px;
+    }
+  }
+}
+

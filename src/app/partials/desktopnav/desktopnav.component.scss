@@ -7,18 +7,22 @@
       font-size: 2rem;
       font-weight: 700;
       margin: 10px;
+      cursor: pointer;
+      outline: transparent;
     }
   .navsearch{
     flex-grow:1;
-    margin: 5px 13px;
-    input{
+    margin: 6px 0;
+    button{
       width:100%;
       border-radius: 40px;
       height: 50px;
       line-height: 50px;
       outline: white;
       padding:0px 30px;
-      border: 1px solid #ccc;
+      border: 2px solid #ccc;
+      background-color: white;
+      color:#ccc;
     }
   }
   .border{
@@ -85,6 +89,8 @@
   }
   .heart-icon{
     margin: 12px 12px 12px 15px;
+    cursor: pointer;
+    outline: transparent;
     img{
       height: 30px;
       width: 30px;
@@ -93,6 +99,8 @@
 
   .cart-icon{
     margin:12px 12px 12px 15px;
+    cursor: pointer;
+    outline: transparent;
     img{
       height: 30px;
       width: 30px;
@@ -139,18 +147,22 @@
       &:hover{
         background:rgb(236, 114, 0);
       }
-      .icon{
-        svg{
-          color:white;
-          width:25px;
-          height:25px;
+        .icon{
+          svg{
+            color:white;
+            width:25px;
+            height:25px;
+          }
         }
-      }
-      .text{
-        color:white;
-        font-weight:500;
-        font-size: 13px;
-      }
+        .text{
+          padding-top:5px;
+          color:white;
+          font-weight:500;
+          font-size: 13px;
+        }
+    }
+    .router-link-active{
+      background:rgb(236, 114, 0);
     }
 
   }

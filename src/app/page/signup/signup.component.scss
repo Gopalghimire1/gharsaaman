@@ -11,7 +11,7 @@
     bottom: 0;
   }
   .user_card {
-    height: 420px;
+    height: 480px;
     width: 600px;
     margin-top: auto;
     margin-bottom: auto;
@@ -45,7 +45,7 @@
     border: 2px solid white;
   }
   .form_container {
-    margin-top: 96px;
+    margin-top: 100px;
   }
   .login_btn {
     width: 100%;
@@ -62,9 +62,10 @@
 
   @media(max-width:768px){
     .user_card {
-      height: 75vh;
+      height: 100%;
+      overflow: scroll;
     }
     .form_container{
-      padding-top: 0px;
+      padding-top: 0px !important;
     }
   }

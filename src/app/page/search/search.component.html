@@ -1,0 +1,48 @@
+
+<div class="mob-nav">
+  <div class="search-link">
+      <span class="back d-block d-md-none" (click)="back()">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+          width="24" height="24"
+          viewBox="0 0 172 172"
+          style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M93.16667,42.49609l-43.50391,43.50391l43.50391,43.5039l10.75,-10.75l-32.75391,-32.7539l32.75391,-32.75391z"></path></g></g></svg>
+      </span>
+      <span class="back d-none d-md-block" (click)="back()">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+          width="24" height="24"
+          viewBox="0 0 172 172"
+          style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M86,6.88c-43.62264,0 -79.12,35.49736 -79.12,79.12c0,43.62264 35.49736,79.12 79.12,79.12c43.62264,0 79.12,-35.49736 79.12,-79.12c0,-43.62264 -35.49736,-79.12 -79.12,-79.12zM115.9624,111.0776c1.3416,1.3416 1.3416,3.5432 0,4.8848c-0.688,0.6536 -1.548,0.9976 -2.4424,0.9976c-0.8944,0 -1.7544,-0.344 -2.4424,-0.9976l-25.0776,-25.0776l-25.0776,25.0776c-0.688,0.6536 -1.548,0.9976 -2.4424,0.9976c-0.8944,0 -1.7544,-0.344 -2.4424,-0.9976c-1.3416,-1.3416 -1.3416,-3.5432 0,-4.8848l25.0776,-25.0776l-25.0776,-25.0776c-1.3416,-1.3416 -1.3416,-3.5432 0,-4.8848c1.3416,-1.3416 3.5432,-1.3416 4.8848,0l25.0776,25.0776l25.0776,-25.0776c1.3416,-1.3416 3.5432,-1.3416 4.8848,0c1.3416,1.3416 1.3416,3.5432 0,4.8848l-25.0776,25.0776z"></path></g></g></svg>
+      </span>
+      <input type="search" [(ngModel)]="key" placeholder="Search" (keydown.enter)="search()">
+      <span class="cancel d-block d-md-none" (click)="search()">SEARCH</span>
+      <span class="btn btn-light btn-sm cancel d-none d-md-block" (click)="search()">SEARCH</span>
+  </div>
+
+</div>
+<div class="container d-block d-md-none" *ngIf="searchkey.length>0 && products.length<=0">
+  <div >
+    <div class="romove-history">
+      <span class="remove-title">Search History</span>
+      <span class="remove-icon" (click)="removeHistory()">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+        width="15" height="15"
+        viewBox="0 0 172 172"
+        style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#000000"><path d="M86,1.24038c-46.79868,0 -84.75962,37.96094 -84.75962,84.75962c0,46.79868 37.96094,84.75962 84.75962,84.75962c46.79868,0 84.75962,-37.96094 84.75962,-84.75962c0,-46.79868 -37.96094,-84.75962 -84.75962,-84.75962zM124.24519,115.07151l-9.19952,9.17368c-1.67969,1.67969 -4.41887,1.67969 -6.09856,0l-22.94712,-22.94712l-22.94712,22.94712c-1.67969,1.67969 -4.41887,1.67969 -6.09856,-0.02584l-9.19952,-9.14784c-1.65385,-1.70553 -1.65385,-4.41887 0,-6.1244l22.94712,-22.94712l-22.92128,-22.92128c-1.67969,-1.70553 -1.67969,-4.44471 0,-6.1244l9.17368,-9.17368c1.67969,-1.70553 4.44471,-1.70553 6.1244,0l22.92128,22.92128l22.94712,-22.92128c1.67969,-1.70553 4.44471,-1.70553 6.09856,0l9.19952,9.14784c1.67969,1.70553 1.67969,4.44471 0,6.15024l-22.94712,22.92128l22.94712,22.94712c1.65385,1.70553 1.65385,4.41887 0,6.1244z"></path></g></g></svg>
+      </span>
+    </div>
+  </div>
+  <div class="search-history" *ngFor="let item of searchkey" (click)="searchByHistory(item)">
+    <span class="search-title">
+      {{ item }}
+    </span>
+  </div>
+</div>
+<div class="container">
+  <app-productgroup [products]="products"></app-productgroup>
+</div>
+
+<div class="container" *ngIf="loaded == true">
+  <div class="text-center not-found" *ngIf="products.length == 0">
+    <img src="assets/not.jpg" alt="">
+  </div>
+</div>

@@ -1,1 +1,35 @@
 
+.mob-footer{
+  display:flex;
+  position: fixed;
+  bottom: 0 ;
+  left:0;
+  right:0;
+  z-index: 999;
+  background: white;
+  line-height: 1;
+  padding: 5px 10px;
+  box-shadow: 0 0 1px 0 #6b6b6b;
+  .menu-item{
+      &.active{
+          .text{
+              color: #4e00a7;
+          }
+      }
+      flex:1;
+      outline: white;
+      text-align: center;
+      .icon{
+          img{
+              width: 22px;
+          }
+          margin-bottom:5px;
+          margin-top:5px;
+      }
+      .text{
+          font-weight: 500;
+      }
+
+  }
+
+}

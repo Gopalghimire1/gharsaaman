@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/services/api.service';
+import { AuthserviceService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-changepassword',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./changepassword.component.scss']
 })
 export class ChangepasswordComponent implements OnInit {
-
-  constructor() { }
+    pass:string="";
+    new:any;
+    repeate:any;
+  constructor(private client:ApiService) { }
 
   ngOnInit(): void {
+
+  }
+
+  updatePassword(){
+      alert('Please enter current password !');
   }
 
 }

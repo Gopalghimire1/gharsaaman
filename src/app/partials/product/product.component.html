@@ -1,6 +1,6 @@
 
 <div class="card" >
-  <img class="card-img-top" src="https://www.meroemart.com/{{product.product_images}}" alt="Card image cap">
+  <img class="card-img-top" src="{{ baseulr + product.product_images}}" [routerLink]="['/product',product.product_id]" alt="Card image cap">
   <div class="card-body" [routerLink]="['/product',product.product_id]" routerLinkActive="router-link-active" >
 
       <p class="name">{{ product.product_name }}</p>

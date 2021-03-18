@@ -1,0 +1,21 @@
+
+<div class="d-none d-md-block">
+  <app-desktopnav></app-desktopnav>
+</div>
+<div class="d-block d-md-none">
+  <app-othenav title="{{cat_name}}" [showback]="true"></app-othenav>
+</div>
+
+<div style="margin: 4rem 1.5rem 2rem 1.5rem;">
+  <div class="text-center" *ngIf="!loaded">
+    <img src="assets/loder.svg" alt="">
+  </div>
+  <div *ngIf="products != 0;">
+    <app-productgroup [products]="products"></app-productgroup>
+  </div>
+  <div *ngIf="loaded">
+    <div *ngIf="products.length==0">
+        <h5 class="text-center"> Product Not Available !</h5>
+    </div>
+  </div>
+</div>

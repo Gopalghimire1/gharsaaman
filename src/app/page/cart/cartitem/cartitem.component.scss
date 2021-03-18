@@ -1,18 +1,22 @@
 
   .flex{
+    color:#4F4F4F;
+    margin-top: 1rem;;
     display: flex;
      .image{
       flex:2;
       margin-right: 2rem;
       img{
         width: 100%;
+        border-radius:5px;
       }
     }
     .desc{
+      position:relative;
       flex:4;
       .title{
         font-size: 18px;
-        font-weight: 700;
+        font-weight: 600;
       }
       .varient{
         span{
@@ -23,10 +27,52 @@
         }
 
       }
+      .btn-rm{
+        position: absolute;bottom:10px;
+        left:0px;
+        padding:5px 0px 0px 0px;
+        font-weight:500;
+        color:#6C757D;
+      }
     }
     .qty{
+      padding-top: 5px;
       flex:2;
+      position: relative;
+      .qty-input{
+
+        color:#929292;
+        display: flex;
+        justify-content: flex-end;
+        button{
+            background: white;
+            color: #4F4F4F;
+            font-weight: 600;
+           border:none;
+           outline: none;
+           line-height: 1;
+            border:1px solid #CED4DA;
+           padding:10px ;
+       }
+       input{
+         text-align: center;
+         width:70px;
+         outline:#CED4DA;
+         border:1px solid #CED4DA;
+         border-left: none;
+         border-right: none;
+       }
+      }
+      .total{
+        position:absolute;
+        bottom:10px ;
+        right:5px;
+        font-weight:600;
+        font-size:1.1rem;
+      }
     }
+
+
   }
 
 
@@ -37,6 +83,7 @@
     background:white;
     margin-bottom:7px;
     position: relative;
+    box-shadow: 0 0 10px 0 #4a4a4a;
     .cartimg{
         border-radius:20px;
         width: 100%;
@@ -47,15 +94,16 @@
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+        width: 90%;
     }
 
     .price{
         font-size:0.7rem;
         font-weight:600;
-        color:#27AE60;
+        color:#9D00FF;
     }
     .cancel{
-        background:#ff4747;
+        background:#ff1111;
         color:white;
         position:absolute ;
         top:10px;
@@ -65,15 +113,17 @@
         border-radius:10px;
         padding:0;
         line-height:12px;
+        border:none;
+
     }
 
     .quantity{
         font-size:0.8rem;
        button{
-            background: #27AE60;
+            background: #007BFF;
             color: white;
             font-weight: 700;
-
+            padding:3px;
            border:none;
            outline: none;
            line-height: 1;

@@ -12,5 +12,7 @@ export class ProductgroupComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+ trackBy(index: number, name: any): number {
+   return name.product_id;
+ }
 }

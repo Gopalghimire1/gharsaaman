@@ -1,41 +1,23 @@
 <div class="d-none d-md-block">
   <app-desktopnav></app-desktopnav>
 </div>
-<div class="d-block d-md-none text-center nav-title">
-  My Cart
-  <button class="back">
-    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 172 172"
-      style=" fill:#000000;">
-      <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
-        stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
-        font-size="none" text-anchor="none" style="mix-blend-mode: normal">
-        <path d="M0,172v-172h172v172z" fill="none"></path>
-        <g fill="#ffffff">
-          <path
-            d="M96.49159,23.72236l-62.27765,62.27764l62.27765,62.27765l18.70913,-18.70913l-43.56851,-43.56851l43.56851,-43.56851z">
-          </path>
-        </g>
-      </g>
-    </svg>
-  </button>
+<div class="d-block d-md-none">
+  <app-othenav title="My Account"></app-othenav>
 </div>
-<section class="dashboard-banner">
+<section class="dashboard-banner d-none d-md-block">
   <div class="dash-banner-content">
     <div class="edit-btn-wrapper mx-auto mb-4">
       <div class="mx-auto dash-profile-img">
-        <img  id="profile_img">
+        <img  id="profile_img" src="{{baseurl+user.image}}">
       </div>
-      <form>
-        <button type="button" class="btn" onclick="changeProfile()"><i class="fas fa-pencil-alt"></i></button>
-        <input type="file" id="pf-pic" style="display: none" accept="image/*" />
-      </form>
+
     </div>
     <h1>Welcome, {{ user.fname }} {{ user.lname }}</h1>
   </div>
 </section>
 
 <div class="container">
-  <div class="row py-4">
+  <div class="row py-4 for-mobile">
     <div class="col-lg-4 col-12">
       <app-usersidebar></app-usersidebar>
     </div>
@@ -47,4 +29,9 @@
   </div>
 </div>
 
-<app-desktopfoot></app-desktopfoot>
+<div *ngIf="largescreen; else smallfoot">
+  <app-desktopfoot></app-desktopfoot>
+</div>
+<ng-template #smallfoot>
+  <app-mobilefoot></app-mobilefoot>
+</ng-template>

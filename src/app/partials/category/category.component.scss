@@ -1,0 +1,42 @@
+.all-category{
+  margin:2rem;
+  .rowitem{
+    padding-right: 0;
+    padding-left: 0;
+  .category{
+    border: #ccc 2px solid;
+    border-radius: 10px;
+    height: 130px;
+    text-align: center;
+    line-height: 1;
+    margin: 10px;
+    padding: 1.5rem;
+    cursor: pointer;
+    outline: transparent;
+    &:hover{
+      background-color: #ccc;
+    }
+    .icon{
+
+    }
+    .title{
+      font-weight: 600;
+    }
+  }
+}
+}
+
+@media(max-width:768px){
+.all-category{
+  margin: 3rem 1.5rem;
+  .rowitem{
+    padding-right: 0;
+    padding-left: 0;
+    .category{
+      .title{
+        word-wrap: break-word;
+      }
+    }
+  }
+  }
+}

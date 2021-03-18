@@ -1,0 +1,126 @@
+label{
+    font-weight:500;
+}
+.md-shadow{
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+.main{
+    margin: .5rem 2rem 1rem 2rem;
+    .top{
+      height: 100px;
+      background-color: rgb(245, 229, 229);
+      text-align: center;
+      border-radius: 3px;
+      .title{
+        color: black;
+        font-size: 22px;
+        font-weight: 900;
+        padding-top:2rem;
+      }
+    }
+    .laptop{
+      margin: 2rem 1rem 2rem 0;
+      .cart-body{
+        box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+        border-radius: 5px;
+        padding: 1rem;
+      }
+    }
+  }
+  @media(max-width:768px){
+    .md-b-top{
+      border-top:1px solid #cacaca;
+    }
+    .itemname{
+      font-weight:600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .md-b-bottom{
+      border-bottom:1px solid #c9c9c9;
+    }
+    .md-shadow{
+      box-shadow: none !important;
+    }
+    .bb {
+      background: white;
+      overflow: scroll;
+      &.topped{
+        background: #efefef !important;
+
+      }
+
+      .nav-title{
+        padding:10px;
+        background:#160505;
+        color:white;
+        padding-bottom:25px;
+        .back{
+          position:absolute;
+          left:15px;top:10px;
+          background:transparent;
+          outline: transparent;
+          border:none;
+        }
+      }
+      .topped{
+        padding: 10px ;
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+      }
+      .main {
+        // background:#d1d1d1;
+        .top{
+          display:none;
+          .title{
+          display:none;
+
+          }
+        }
+        margin: 0px;
+        background: #d1d1d1;
+        width: 100%;
+        /* margin: 0px 10px; */
+        padding: 7px 7px;
+        overflow: scroll;
+        border-radius: 15px;
+        bottom: 0px;
+        min-height: 150vh;
+        margin-top: -15px;
+
+        &.maintopped{
+          margin-top:20px;
+        }
+
+        div.post {
+          background: white;
+          border-radius: 15px;
+          margin: 5px;
+          padding: 10px;
+        }
+
+        .laptop{
+          margin: 0px;
+          margin:10px;
+
+          background:white;
+          border-radius:15px;
+          overflow:hidden;
+          .items{
+            background:#160505;
+            color:white;
+            border-radius: 15px;;
+          }
+          .cart-body{
+            box-shadow: none;
+            border-radius: 0px;
+            padding: 0rem;
+          }
+
+        }
+      }
+    }
+  }

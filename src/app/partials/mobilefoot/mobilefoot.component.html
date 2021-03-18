@@ -1,1 +1,32 @@
-
+<footer class="d-md-none d-flex mob-footer">
+  <div class="menu-item" [routerLink]="['/']" routerLinkActive="active" >
+      <div class="icon">
+          <img src="assets/home1.svg" alt="">
+      </div>
+      <div class="text">Home</div>
+  </div>
+  <div class="menu-item" [routerLink]="['/categories']" routerLinkActive="active" >
+      <div class="icon">
+          <img src="assets/shop.svg" alt="">
+      </div>
+      <div class="text">Categories</div>
+  </div>
+  <!-- <div class="menu-item" >
+      <div class="icon">
+          <img src="assets/gift-box.svg" alt="">
+      </div>
+      <div class="text">Offers</div>
+  </div> -->
+  <div class="menu-item" [routerLink]="['/cart']" >
+      <div class="icon">
+          <img src="assets/shopping-cart.svg" alt="">
+      </div>
+      <div class="text">Cart</div>
+  </div>
+  <div class="menu-item" [routerLink]="['/user/dashboard']" >
+      <div class="icon">
+          <img src="assets/user.svg" alt="">
+      </div>
+      <div class="text">Account</div>
+  </div>
+</footer>

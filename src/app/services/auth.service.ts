@@ -37,6 +37,7 @@ export class AuthserviceService {
           this.user.phone=res.acc.mobile_number;
           this.user.email=res.user.email;
           this.user.image = res.acc.profile_img;
+          this.user.id = res.user.id;
           this.logged=true;
           this.authSet.emit(null);
         });
@@ -75,6 +76,7 @@ export class AuthserviceService {
        this.user.phone=res.acc.mobile_number;
        this.user.email=res.user.email;
        this.user.image = res.acc.profile_img;
+       this.user.id = res.user.id;
        this.client.updateToken(this.token);
        this.logged=true;
        this.signupsucceeded.emit(res);
@@ -105,6 +107,7 @@ export class AuthserviceService {
         this.user.phone=res.acc.mobile_number;
         this.user.email=res.user.email;
        this.user.image = res.acc.profile_img;
+       this.user.id = res.user.id;
         this.client.updateToken(this.token);
         this.logged=true;
         this.signupsucceeded.emit(res);

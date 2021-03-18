@@ -8,3 +8,12 @@ body{
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+.carousel-inner{
+  outline: transparent !important;
+}
+
+.nooutline{
+
+    outline: transparent !important;
+
+}

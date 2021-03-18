@@ -4,8 +4,10 @@
 <ng-template #smallnav>
   <app-mobilenav></app-mobilenav>
 </ng-template>
-<router-outlet>
-</router-outlet>
-<div>
+<router-outlet></router-outlet>
+<div *ngIf="largescreen; else smallfoot">
   <app-desktopfoot></app-desktopfoot>
 </div>
+<ng-template #smallfoot>
+  <app-mobilefoot></app-mobilefoot>
+</ng-template>

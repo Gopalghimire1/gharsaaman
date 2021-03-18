@@ -1,0 +1,39 @@
+<div class="d-none d-md-block">
+  <app-desktopnav></app-desktopnav>
+</div>
+<div class="d-block d-md-none">
+  <app-othenav title="Reset Password" [showback]="true"></app-othenav>
+</div>
+
+<div class="main">
+  <div class="top d-none d-md-block">
+    <div class="title">Change New Password</div>
+  </div>
+  <div class="row justify-content-md-center laptop" style="height: 500px;">
+    <div class="col-lg-4 col-12 cart-body">
+        <div class="form-group" >
+          <label for="number">Phone Number</label>
+          <input type="text" class="form-control" [(ngModel)]="phone" placeholder="Enter phone Number">
+        </div>
+        <div class="form-group" >
+          <label for="number">Enter Verification Code</label>
+          <input type="text" class="form-control" [(ngModel)]="code" placeholder="Enter Code">
+        </div>
+        <div class="form-group" >
+          <label for="number">Enter New Password</label>
+          <input type="password" class="form-control" [(ngModel)]="npass" placeholder="Enter New Password">
+        </div>
+        <div class="form-group" >
+          <label for="number">Confirm New Password</label>
+          <input type="password" class="form-control" [(ngModel)]="repass" placeholder="Confirm Password">
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary btn-block" (click)="savePass()">Save Password</button>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="d-none d-md-block">
+  <app-desktopfoot></app-desktopfoot>
+</div>
+

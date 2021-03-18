@@ -1,0 +1,26 @@
+
+
+  <div class="row p-2" >
+    <div class="col-md-12 ">
+      <div class="form-group">
+        <input type="password" [(ngModel)]="opass" class="form-control" placeholder="Current Password">
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class="form-group">
+        <input type="password" [(ngModel)]="npass"  class="form-control"  placeholder="New Password">
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <div class="form-group">
+        <input type="password" [(ngModel)]="rpass"  class="form-control"  placeholder="Confirm Password">
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="form group">
+        <button class="btn btn-primary" (click)="updatePassword()">Save Password</button>
+      </div>
+    </div>
+  </div>

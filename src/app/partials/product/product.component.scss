@@ -1,6 +1,15 @@
 .card{
+  border:none;
+  box-shadow: 2px 2px 10px 0 #00000038;
+  .card-img-top{
+
+    cursor: pointer;
+    outline: transparent  !important;
+  }
   .card-body{
     padding:0.5rem;
+    cursor: pointer;
+    outline: transparent  !important;
     .name{
       font-weight:600;
       white-space: nowrap;
@@ -46,14 +55,14 @@
       padding:0.5rem;
       .name{
         font-weight:600;
-        font-size:0.9rem;
+        font-size:0.8rem;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         margin: 0;
       }
       .price{
-        font-size:0.8rem;
+        font-size:0.87rem;
         font-weight:600;
         margin:0px;
         .new{

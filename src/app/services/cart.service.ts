@@ -39,6 +39,11 @@ export class CartService {
     this.total=tot;
   }
 
+  emptyCart(){
+    this.items=[];
+    this.calculateAll();
+  }
+
   remove(_ident:any){
     let i = this.items.findIndex((obj => obj.ident == _ident));
     this.items.splice(i,1);

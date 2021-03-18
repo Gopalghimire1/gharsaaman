@@ -1,5 +1,6 @@
 import { Component, OnInit,Input, Output, EventEmitter } from '@angular/core';
 import { Cart } from 'src/app/Model/cart';
+import { Setting } from 'src/app/Model/setting';
 
 @Component({
   selector: 'app-cartitem',
@@ -8,6 +9,7 @@ import { Cart } from 'src/app/Model/cart';
 })
 export class CartitemComponent implements OnInit {
 
+  url=Setting.url;
   largescreen=true;
   @Input() cart:Cart;
   @Output() changed=new EventEmitter<Cart>()

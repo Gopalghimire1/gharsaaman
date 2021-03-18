@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { CategoryService } from 'src/app/services/category.service';
 
 @Component({
   selector: 'app-mobilenav',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mobilenav.component.scss']
 })
 export class MobilenavComponent implements OnInit {
-
-  constructor() { }
+  verticalOffset:number;
+  constructor(public cat:CategoryService) { }
 
   ngOnInit(): void {
+
+  }
+
+  @HostListener('window:scroll', ['$event']) // for window scroll events
+  onScroll(event:any) {
+    this.verticalOffset = window.pageYOffset
+    || document.documentElement.scrollTop
+    || document.body.scrollTop || 0;
+
+
   }
 
 }

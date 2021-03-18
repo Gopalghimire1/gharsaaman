@@ -1,0 +1,32 @@
+.categories{
+  margin:10px;
+  display:flex;
+
+  .nav-item{
+    flex:1;
+    text-align:center;
+    list-style-type: none;
+    box-shadow: 0 0 3px 0 #0000001e;
+    border-radius:5px;
+    margin:4px;
+    padding:4px;
+    .icon{
+
+    }
+    .text{
+      font-weight:600;
+      font-size:0.7rem;
+    }
+  }
+}
+.title{
+  margin: 6px 15px;
+  display: flex;
+  justify-content: space-between;
+  .title-text{
+    font-weight: 700;
+    font-size:0.8rem;
+    outline: transparent;
+  }
+
+}

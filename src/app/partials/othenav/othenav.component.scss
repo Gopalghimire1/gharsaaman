@@ -1,20 +1,17 @@
 .mobilenav{
-    &.istop{
-        padding:10px !important;
-        position: absolute;
-        top:0px;
-        left: 0px;
-        right: 0px;
-        .back{
-            position:absolute;
-            left:15px;top:10px;
-        }
-    }
+    padding:10px !important;
+    position: fixed;
+    top:0px;
     transition: 0.3s all;
     z-index:99;
-    padding:20px 10px 15px 10px;
-    background: #27AE60;
-    position: relative;
+    right:0;
+    left: 0;
+    padding:15px 10px 15px 10px;
+    background: #160505;
+    .back{
+        position:absolute;
+        left:15px;top:10px;
+    }
     .title{
         color:white;
         text-align: center;
@@ -23,8 +20,12 @@
     }
     .back{
         position:absolute;
-        left:15px;top:15px;
-
+        left:15px;top:10px;
+        padding-bottom: 4px;
+        border: none;
+        background: transparent;
+        border-radius: 10px;
+        outline: transparent;
     }
 }
 

@@ -1,1 +1,10 @@
-<p>mobilenav works!</p>
+<div class="mob-nav">
+    <div class="title" *ngIf="this.verticalOffset<10">
+        Gharsaaman
+    </div>
+    <div class="search-link">
+        <button [routerLink]="['/search']" routerLinkActive="router-link-active" >Search</button>
+    </div>
+
+</div>
+

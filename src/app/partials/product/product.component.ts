@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Setting } from 'src/app/Model/setting';
 import { FavService } from 'src/app/services/fav.service';
 
 @Component({
@@ -9,6 +10,7 @@ import { FavService } from 'src/app/services/fav.service';
 export class ProductComponent implements OnInit {
   liked:boolean=false;
   @Input() product:any;
+  baseulr = Setting.url;
   constructor(public fav:FavService) { }
 
   managefav(id:any){

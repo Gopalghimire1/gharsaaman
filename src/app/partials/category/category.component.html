@@ -1,1 +1,24 @@
-<p>category works!</p>
+<div class="d-none d-md-block">
+  <app-desktopnav></app-desktopnav>
+</div>
+<div class="d-block d-md-none">
+  <app-othenav title="Categories" [showback]="true"></app-othenav>
+</div>
+
+<div class="all-category">
+    <div class="row">
+      <div class="col-lg-2 col-sm-6 col-md-4 col-6 rowitem" *ngFor="let cat of categories">
+       <div class="category" [routerLink]="['/category',cat.cat_id]" routerLinkActive="router-link-active" (click)="saveCatName(cat.cat_name);" >
+         <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+            width="50" height="50"
+            viewBox="0 0 172 172"
+            style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#000000"><path d="M143.33333,28.66667h-114.66667c0,9.46 -7.74,17.2 -17.2,17.2v80.26667c9.46,0 17.2,7.74 17.2,17.2h114.66667c0,-9.46 7.74,-17.2 17.2,-17.2v-80.26667c-9.46,0 -17.2,-7.74 -17.2,-17.2zM120.4,80.26667h-68.8c-3.1648,0 -5.73333,-2.56853 -5.73333,-5.73333c0,-3.1648 2.56853,-5.73333 5.73333,-5.73333h68.8c3.1648,0 5.73333,2.56853 5.73333,5.73333c0,3.1648 -2.56853,5.73333 -5.73333,5.73333zM120.4,103.2h-68.8c-3.1648,0 -5.73333,-2.56853 -5.73333,-5.73333c0,-3.1648 2.56853,-5.73333 5.73333,-5.73333h68.8c3.1648,0 5.73333,2.56853 5.73333,5.73333c0,3.1648 -2.56853,5.73333 -5.73333,5.73333z"></path></g></g></svg>
+         </div>
+         <div class="title">
+           {{ cat.cat_name}}
+         </div>
+       </div>
+      </div>
+    </div>
+</div>

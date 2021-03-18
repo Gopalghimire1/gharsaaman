@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Cart } from 'src/app/Model/cart';
 import { OthenavComponent } from 'src/app/partials/othenav/othenav.component';
@@ -11,7 +12,7 @@ import { ScrollserviceService } from 'src/app/services/scrollservice.service';
 })
 export class CartComponent implements OnInit {
   topped=false;
-  constructor(public scrolle:ScrollserviceService,public cartservice:CartService) { }
+  constructor(public scrolle:ScrollserviceService,public cartservice:CartService,private location:Location) { }
   @ViewChild('navbar') navbar:OthenavComponent
   ngOnInit() {}
 
@@ -30,4 +31,5 @@ export class CartComponent implements OnInit {
     console.log('on cart window');
     this.cartservice.remove(data.ident);
   }
+
 }

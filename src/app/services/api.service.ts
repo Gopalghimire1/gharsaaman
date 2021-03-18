@@ -35,13 +35,27 @@ export class ApiService {
   }
 
   getWithAuth(url:any){
-
     return this.client.get(url,{headers:this.authheaders});
   }
+
   postWithAuth(url:any,data:any){
     return this.client.post(url,data,{headers:this.authheaders});
+  }
+
+
+  postFileWithAuth(url:any,data:FormData){
+    let fileheaders = new HttpHeaders()
+    // .append('Content-Type', 'multipart/form-data')
+    // .append('accept', 'application/json')
+    .append('xpsu', '123456')
+    .append("Authorization","Bearer "+this.token);
+    return this.client.post(url,data,{headers:fileheaders});
 
   }
+
+
+
+
 }
 
 

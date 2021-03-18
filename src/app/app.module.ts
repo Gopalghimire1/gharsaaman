@@ -17,7 +17,6 @@ import { CategoryComponent } from './partials/category/category.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SingleproductComponent } from './page/singleproduct/singleproduct.component'
 import { QtyComponent } from './partials/qty/qty.component';
-import { VariantChooserComponent } from './partials/variant-chooser/variant-chooser.component';
 import { ImageviwerComponent } from './partials/imageviwer/imageviwer.component';
 import { SmallComponent } from './partials/imageviwer/small/small.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
@@ -38,6 +37,16 @@ import { CategoryService } from './services/category.service';
 import { AuthserviceService } from './services/auth.service';
 import { HomepageService } from './services/homepage.service';
 import { LoaderComponent } from './partials/loader/loader.component';
+import { CheckoutComponent } from './page/checkout/checkout.component';
+import { RecomproductComponent } from './page/recomproduct/recomproduct.component';
+import { VariantChooserComponent } from './partials/variant-chooser/variant-chooser.component';
+import { RouterModule } from '@angular/router';
+import { CategorywiseComponent } from './page/categorywise/categorywise.component';
+import { MobilecategoryComponent } from './partials/mobilecategory/mobilecategory.component';
+import { SearchComponent } from './page/search/search.component';
+import { PasschangeComponent } from './page/passchange/passchange.component';
+import { ResetpasswordComponent } from './page/resetpassword/resetpassword.component';
+import { ResetpasschangeComponent } from './page/resetpasschange/resetpasschange.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +62,6 @@ import { LoaderComponent } from './partials/loader/loader.component';
     CategoryComponent,
     SingleproductComponent,
     QtyComponent,
-    VariantChooserComponent,
     ImageviwerComponent,
     SmallComponent,
     LoginComponent,
@@ -69,7 +77,16 @@ import { LoaderComponent } from './partials/loader/loader.component';
     OrderitemComponent,
     UserComponent,
     UsersidebarComponent,
-    LoaderComponent
+    LoaderComponent,
+    CheckoutComponent,
+    RecomproductComponent,
+    VariantChooserComponent,
+    CategorywiseComponent,
+    MobilecategoryComponent,
+    SearchComponent,
+    PasschangeComponent,
+    ResetpasswordComponent,
+    ResetpasschangeComponent
   ],
   imports: [
     BrowserModule,
@@ -78,7 +95,8 @@ import { LoaderComponent } from './partials/loader/loader.component';
     FormsModule,
     NgbModule,
     CarouselModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
   ],
   providers: [CategoryService,AuthserviceService,HomepageService],
   bootstrap: [AppComponent]
